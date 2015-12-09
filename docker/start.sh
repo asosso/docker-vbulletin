@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Execute update
-(cd core/install ; php -f update.php)
+(cd core/install ; php -f upgrade.php)
 
 # Remove installation folder
 rm -rf core/install

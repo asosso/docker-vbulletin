@@ -1,0 +1,19 @@
+vbulletin:
+  build: .
+  volumes:
+    # Change location of vBulletin files.
+    - /var/www/core/core/includes/config.php:/var/www/core/includes/config.php
+    - /var/www/core/config.php:/var/www/config.php
+    - /var/www/attachments:/var/www/attachments
+    - /var/www/core/core/images:/var/www/core/images
+    - /var/www/core/core/customavatars:/var/www/core/customavatars
+    - /var/www/core/core/vbulletin_css:/var/www/core/clientscript/vbulletin_css
+
+nginx:
+  image: nginx
+  ports:
+    - 80:80
+  volumes_from:
+    - vbulletin
+  links:
+    - vbulletin

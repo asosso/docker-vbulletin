@@ -10,7 +10,7 @@ RUN apt-get update \
         git \
         php5 php5-apcu php5-cli php5-curl php5-imagick php5-fpm php5-gd php5-intl php5-mysql php5-sqlite \
         sudo \
-		unzip \
+	unzip \
         vim \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
